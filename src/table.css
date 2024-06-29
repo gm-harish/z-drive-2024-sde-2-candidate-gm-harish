@@ -1,38 +1,78 @@
-.table-container {
-  padding: 1rem;
-  display: grid;
-  grid-template:
-    "initial . name . unMember . status . region. area" auto /
-    200px 8px 200px 8px 200px 8px 200px 8px 200px 8px 200px;
-  border: 1px solid black;
-}
-.table-container:nth-child(odd) {
-  background-color: grey;
-}
-.table-container:nth-child(even) {
-  background-color: white;
-}
-.initial {
-  grid-area: initial;
-  place-self: center;
-}
-.name {
-  grid-area: name;
-  place-self: center;
-}
-.unMember {
-  grid-area: unMember;
-  place-self: center;
-}
-.status {
-  grid-area: status;
-  place-self: center;
-}
-.region {
-  grid-area: region;
-  place-self: center;
-}
-.area {
-  grid-area: area;
-  place-self: center;
-}
+.table-root {
+	width: max-content;
+	padding: 16px;
+	overflow: scroll;
+  }
+  .table-container {
+	padding: 1rem;
+	display: grid;
+	grid-template:
+	  "initial . name . unMember . status . region. area" auto /
+	  20px 8px 200px 8px 200px 8px 200px 8px 200px 8px 200px;
+	border: 1px solid black;
+  }
+  .table-container:nth-child(odd) {
+	background-color: grey;
+  }
+  .table-container:nth-child(even) {
+	background-color: white;
+  }
+  .initial {
+	grid-area: initial;
+	place-self: center;
+  }
+  .name {
+	grid-area: name;
+	place-self: center;
+	display: flex;
+	align-items: center;
+  }
+  .unMember {
+	grid-area: unMember;
+	place-self: center;
+	display: flex;
+	align-items: center;
+  }
+  .status {
+	grid-area: status;
+	place-self: center;
+	display: flex;
+	align-items: center;
+  }
+  .region {
+	grid-area: region;
+	place-self: center;
+	display: flex;
+	align-items: center;
+  }
+  .area {
+	grid-area: area;
+	place-self: center;
+	display: flex;
+	align-items: center;
+  }
+  
+  .triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid #2f2f2f;
+	font-size: 0;
+	line-height: 0;
+	float: left;
+	margin: 0 2px;
+  }
+  
+  .triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #2f2f2f;
+	font-size: 0;
+	line-height: 0;
+	float: left;
+	margin: 0 2px;
+  }
+  

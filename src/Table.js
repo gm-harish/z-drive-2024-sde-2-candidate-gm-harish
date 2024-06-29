@@ -9,21 +9,34 @@ export const Table = ({
   onSortClicked,
 }) => {
   return (
-    <div>
+    <div className="table-root">
       <div className="table-container">
         {columnsData.map((column) => (
-          <div key={column.id} className={column.id}>
-            {column.label}
-            {column.isSortable && (
-              <button
-                onClick={() => {
-                  onSortClicked(column.id);
-                }}
-              >
-                sort
-              </button>
-            )}
-          </div>
+          <>
+            <div key={column.id} className={column.id}>
+              {column.label}
+              {column.isSortable && (
+                <div>
+                  <div
+                    className="triangle-up"
+                    onClick={() => {
+                      onSortClicked(column.id, true);
+                    }}
+                  >
+                    sort up
+                  </div>
+                  <div
+                    className="triangle-down"
+                    onClick={() => {
+                      onSortClicked(column.id, false);
+                    }}
+                  >
+                    sort down
+                  </div>
+                </div>
+              )}
+            </div>
+          </>
         ))}
       </div>
       <div className="table-container">
@@ -34,7 +47,7 @@ export const Table = ({
                 type="text"
                 placeholder="All"
                 onChange={(e) => {
-                  onFilerChange(e, column);
+                  onFilerChange(e, column.id);
                 }}
               />
             )}
