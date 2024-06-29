@@ -1,9 +1,21 @@
 .App {
-  font-family: sans-serif;
-}
-
-.filter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+	font-family: sans-serif;
+	width: 100%;
+  }
+  
+  .filter {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 16px;
+  }
+  
+  .loader {
+	position: fixed;
+	top: 50%;
+	left: 50%
+	transform: translate(-50%), -50%;
+	z-index: 2;
+	opacity: 0.5;
+  }
+  
